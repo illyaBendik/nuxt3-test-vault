@@ -3,5 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - APP_SECURE=123
     ports:
       - "3000:3000"
