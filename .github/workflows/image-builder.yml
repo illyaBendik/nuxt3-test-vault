@@ -32,7 +32,7 @@ jobs:
       - name: Retrieve Secrets from Vault
         uses: hashicorp/vault-action@v2
         with:
-          url: http://127.0.0.1:8200
+          url: http://64.176.70.216:8200
           tlsSkipVerify: true
           token: ${{ secrets.VAULT_TOKEN }}
           secrets: |
