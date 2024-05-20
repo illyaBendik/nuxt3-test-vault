@@ -20,8 +20,8 @@ COPY ./package.json ./
 COPY --from=BUILDER /var/www/client/node_modules ./node_modules/
 COPY --from=BUILDER /var/www/client/.output ./.output/
 
-ARG APP_SECURE="123"
-ENV APP_SECURE=${APP_SECURE}
+ARG app_secret
+ENV APP_SECURE=${app_secret}
 
 ENV NODE_ENV=production
 ENV NITRO_PORT=3000
